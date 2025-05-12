@@ -1,14 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
-import ProductDetails from "./pages/ProductDetails.jsx"
+import ProductDetails from "./pages/ProductDetails.jsx";
+import ProductSearch from "./pages/ProductSearch.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/search",
+    element: <ProductSearch />,
+  },
+  {
+    path: "/product/:code",
+    element: <ProductDetails />,
+  },
+]);
 
 export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product/:code" element={<ProductDetails />} />
-      </Routes>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
