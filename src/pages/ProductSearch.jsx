@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { name, category, barcode } from "../api.js";
 import ProductCard from "../components/ProductCard.jsx";
 import SearchBar from "../components/SearchBar.jsx";
@@ -144,9 +144,9 @@ export default function HomePage() {
     <div className="w-full min-h-screen bg-black text-white transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <header className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-6">
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-center sm:text-left">
-            Food Product Explorer
-          </h1>
+          <Link to= "/" className="text-4xl sm:text-5xl font-extrabold tracking-tight text-center sm:text-left">
+            NutriHunt
+          </Link>
           <button
             onClick={() => navigate("/cart")}
             className="bg-white text-black cursor-pointer font-bold py-2 px-4 rounded"
