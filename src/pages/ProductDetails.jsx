@@ -41,7 +41,7 @@ export default function ProductDetails() {
 
   return (
     <div className="min-h-screen pt-24 px-6 md:px-20 lg:px-40 bg-black text-gray-900 dark:text-gray-100">
-      <div className=":bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
+      <div className="bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
         {product.image_url ? (
           <img
             src={product.image_url}
