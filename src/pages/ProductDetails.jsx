@@ -40,24 +40,25 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="min-h-screen pt-24 px-6 md:px-20 lg:px-40 bg-black text-gray-900 dark:text-gray-100">
-      <div className="bg-gray-800 rounded-3xl shadow-xl p-8 md:p-12 flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start">
+    <div className="min-h-screen pt-10 px-4 sm:px-6 md:px-10 pb-10 lg:px-20 bg-black text-gray-900 dark:text-gray-100">
+      <div className="bg-gray-800 rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 flex flex-col md:flex-row gap-8 sm:gap-10 md:gap-16 items-center md:items-start">
         {product.image_url ? (
           <img
             src={product.image_url}
             alt={product.product_name}
-            className="rounded-2xl shadow-lg border border-gray-700 max-h-[80vh] w-auto object-contain"
+            className="rounded-2xl shadow-lg border border-gray-700 max-h-[60vh] sm:max-h-[70vh] w-full sm:w-auto max-w-xs sm:max-w-sm md:max-w-md object-contain"
           />
         ) : (
-          <div className="w-full max-w-sm h-64 bg-gray-700 rounded-2xl flex items-center justify-centertext-gray-400 text-lg font-medium">
+          <div className="w-full sm:w-64 h-64 bg-gray-700 rounded-2xl flex items-center justify-center text-gray-400 text-center text-lg font-medium px-4">
             No Image Available
           </div>
         )}
-        <div className="flex-1">
-          <h2 className="text-4xl font-extrabold mb-4 tracking-tight">
+
+        <div className="flex-1 w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 tracking-tight text-center md:text-left">
             {product.product_name}
           </h2>
-          <div className="space-y-4 text-lg leading-relaxed">
+          <div className="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed">
             <p>
               <span className="font-semibold text-blue-600 dark:text-blue-400">
                 Brand:
